@@ -1,5 +1,6 @@
 
 import { authOptions } from "@/utils/authOption";
+
 import prisma from "@/utils/prisma";
 import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
@@ -48,26 +49,30 @@ export async function POST(request: NextRequest) {
 }
 
 export async function GET() {
-    const session = await getServerSession(authOptions);
-    if (!session) {
-        return NextResponse.json(
-          { error: "You are Unauthorized" },
-          { status: 401 }
-        );
-      } 
-      const user = await prisma.user.findUnique({
-        where: {
-          id: session.user.id,
-        },
-      });
-    
-      if (!user) {
-        return NextResponse.json({ error: "No user found" }, { status: 401 });
-      } 
-      const posts = await prisma.post.findMany({ 
-        where: {
-            userId: session.user.id,
-        },
+  const session = await getServerSession(authOptions);
+  if (!session) {
+    return NextResponse.json(
+      { error: "You are Unauthorized" },
+      { status: 401 }
+    );
+  }
 
-      });
+  const user = await prisma.user.findUnique({
+    where: {
+      id: session.user.id,
+    },
+  });
+
+  if (!user) {
+    return NextResponse.json({ error: "No user found" }, { status: 401 });
+  }
+
+  const posts = await prisma.post.findMany({
+    where: {
+      userId: user.id,
+    },
+    orderBy: { createdAt: "desc" },
+  });
+
+  return NextResponse.json(posts);
 }
