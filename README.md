@@ -1,25 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+http://localhost:3000/api/auth/callback/google
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Project Title: AI-Powered Text-to-Image Generator
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Description:
+This project is a SaaS (Software as a Service) application that leverages advanced AI models to transform text prompts into stunning images. Users simply enter descriptive text, and the application generates high-quality, unique images based on the prompt. Deployed on Vercel for high-performance, global access, the app is optimized for fast response times and seamless user experience.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Features:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
+Text-to-Image Conversion: Utilizes powerful AI algorithms to interpret text prompts and create visually striking images.
+Real-Time Image Generation: Provides users with fast and responsive image creation, making it ideal for designers, marketers, and content creators.
+User-Friendly Interface: Designed with simplicity and ease of use, the UI guides users through the generation process with minimal input required.
+Secure Authentication: Built with authentication features to protect user accounts and personal preferences.
+Efficient Cloud Deployment: Hosted on Vercel, ensuring high availability and scalability for users worldwide.
 
 
 ## Deploy on Vercel
