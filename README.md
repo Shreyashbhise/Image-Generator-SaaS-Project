@@ -21,3 +21,4 @@ Efficient Cloud Deployment: Hosted on Vercel, ensuring high availability and sca
 ![Screenshot (13)](https://github.com/user-attachments/assets/d743dcca-2bda-4fba-a4d5-916ab75c9586)
 ![Screenshot (14)](https://github.com/user-attachments/assets/04124ef3-e20a-44ef-85d9-fd6c69039186)
 ![Screenshot (15)](https://github.com/user-attachments/assets/f6b8f662-862f-4cff-aa1e-2883c98c577e)
+![Screenshot (17)](https://github.com/user-attachments/assets/74766094-86d7-4bf2-ac09-68082441d437)
